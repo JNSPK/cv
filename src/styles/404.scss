@@ -1,0 +1,28 @@
+@import './settings.scss';
+
+.container {
+  color: $thirdColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $secondaryColor;
+  font-weight: 400;
+  font-size: large;
+  gap: 1rem;
+  .title-container {
+    display: flex;
+    gap: 1rem;
+  }
+  .title {
+    font-size: $x-large;
+  }
+  .zeroji {
+    font-size: 4.5rem;
+  }
+
+  .back {
+    text-decoration: none;
+    font-size: $large;
+  }
+}
