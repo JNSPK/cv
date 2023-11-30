@@ -1,0 +1,41 @@
+@import './settings.scss';
+.container {
+  background-color: #252422;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+
+  .pp {
+    font-size: $small;
+    object-fit: cover;
+    height: 50%;
+    border-radius: 50%;
+    box-shadow: 0px 9px 11px -3px rgba(13, 13, 13, 0.75);
+    -webkit-box-shadow: 0px 9px 11px -3px rgba(13, 13, 13, 0.75);
+    -moz-box-shadow: 0px 9px 11px -3px rgba(13, 13, 13, 0.75);
+  }
+  .aPropos {
+    color: $thirdColor;
+    line-height: 3rem;
+    width: 100%;
+    gap: 2rem;
+
+    .aPropos-title {
+      position: relative;
+    }
+    .aPropos-title:after {
+      content: '';
+      position: absolute;
+      bottom: -5%;
+      display: block;
+      background-color: $primaryColor;
+      height: 2%;
+      width: 10%;
+      border-radius: 15px;
+    }
+    .word-colored {
+      color: $primaryColor;
+    }
+  }
+}

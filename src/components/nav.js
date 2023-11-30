@@ -19,6 +19,13 @@ const Nav = () => {
           }>
           À Propos
         </NavLink>
+        <NavLink
+          to='/contact'
+          className={({ isActive, isPending }) =>
+            isPending ? 'pending' : isActive ? 'active' : ''
+          }>
+          Contact
+        </NavLink>
       </nav>
     </header>
   );

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Error404() {
   return (
-    <div className='container'>
+    <div className='container-404'>
       <div className='title-container'>
         <h1 className='title'>404</h1>
         <span className='zeroji'>😕</span>

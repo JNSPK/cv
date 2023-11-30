@@ -1,0 +1,11 @@
+@import './settings.scss';
+
+.banner {
+  display: flex;
+  color: #fffffa;
+  font-size: 6rem;
+  height: 100%;
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+}
