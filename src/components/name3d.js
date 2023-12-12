@@ -1,13 +1,6 @@
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import {
-  Center,
-  Text3D,
-  Float,
-  useTexture,
-  Environment,
-} from '@react-three/drei';
+import { Center, Text3D, Float, useTexture } from '@react-three/drei';
 import { useRef } from 'react';
-import { PointLight } from 'three';
 
 const CustomMesh = () => {
   const ref = useRef();
@@ -38,15 +31,15 @@ const CustomMesh = () => {
                 bevelThickness={1}
                 bevelEnabled
                 curveSegments={20}
-                size={3.5}
+                size={2.5}
                 lineHeight={1}
                 letterSpacing={0.1}
-                font={'/BLASTIMO.json'}>
+                font={'/JHreverse.json'}>
                 {`Johan Nilsson`}
-                <meshStandardMaterial />
+                <meshStandardMaterial metalness={0.1} roughness={0} />
               </Text3D>
             </mesh>
-            <mesh position={[5.5, -2, 1.5]}>
+            <mesh position={[9.5, -3, -1.5]}>
               <Text3D
                 bevelSegments={20}
                 bevelThickness={0.5}
@@ -57,7 +50,7 @@ const CustomMesh = () => {
                 letterSpacing={0.1}
                 font={'/Payback.json'}>
                 {`Portfolio`}
-                <meshStandardMaterial />
+                <meshStandardMaterial metalness={0.1} roughness={0} />
               </Text3D>
             </mesh>
           </Float>
@@ -73,16 +66,15 @@ const Scene = () => {
 
   const lightColour = '#ffb649'; //orange
   const spotLightIntensity = 1.3;
-  const spotLightRadius = 90;
+  const spotLightRadius = 1.57;
   const spotLightColour2 = '#4C3B4D'; //violet
-  const spotLightIntensity2 = 8;
-  const spotLightRadius2 = 130;
+  const spotLightIntensity2 = 2;
+  const spotLightRadius2 = 2.26;
   const texture = useTexture('./textures/marble.jpg');
-  const texture2 = useTexture('./textures/marble2.jpg');
+  const texture3 = useTexture('./textures/marble3.jpg');
 
   return (
     <>
-      {/* <Environment preset='dawn' /> */}
       <ambientLight intensity={3} color={spotLightColour2} />
 
       <spotLight
@@ -90,37 +82,45 @@ const Scene = () => {
         ref={spotLightref}
         intensity={spotLightIntensity}
         color={lightColour} //orange
-        angle={spotLightRadius}
-        decay={0}
-        map={texture}
-      />
-      <spotLight
-        position={[-5, -10, 0]}
-        ref={spotLightref2}
-        intensity={spotLightIntensity2}
-        color={spotLightColour2} //violet
-        angle={spotLightRadius2}
+        angle={10}
         decay={0}
         map={texture}
       />
 
       <spotLight
-        position={[2, 2, -2]}
+        position={[-2, 2, 0]}
         ref={spotLightref}
-        intensity={1}
+        intensity={1.57}
         color={'red'} //rouge
         angle={spotLightRadius}
         decay={0}
-        map={texture2}
+        map={texture3}
       />
 
       <spotLight
-        position={(10, 0, 7)}
+        position={(0, 0, 10)}
+        ref={spotLightref2}
+        intensity={5}
+        angle={9}
+        decay={0.05}
+        map={texture3} //texture
+      />
+      <spotLight
+        position={(2, 1, 3)}
+        ref={spotLightref2}
+        intensity={2}
+        angle={3.14}
+        decay={0}
+        color={spotLightColour2}
+      />
+      <spotLight
+        position={(1, -1, 1)}
         ref={spotLightref2}
         intensity={3}
-        angle={1}
-        decay={0}
-        map={texture}
+        angle={3.14}
+        decay={0.5}
+        map={texture3}
+        color={'red'}
       />
 
       <CustomMesh />
