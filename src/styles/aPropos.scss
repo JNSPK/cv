@@ -19,7 +19,8 @@
     color: $thirdColor;
     line-height: 3rem;
     width: 100%;
-    gap: 2rem;
+    max-width: 30rem;
+    justify-self: left;
 
     .aPropos-title {
       position: relative;
