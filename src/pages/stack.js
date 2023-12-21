@@ -6,6 +6,8 @@ import js from '../img/js.png';
 import react from '../img/react.png';
 import sass from '../img/sass.png';
 import three from '../img/three.svg';
+import typescript from '../img/typescript.png';
+import figma from '../img/figma.png';
 
 const Stack = () => {
   return (
@@ -36,8 +38,18 @@ const Stack = () => {
         niveau='Intermédiaire'
         tags={['Openclassrooms']}></Card>
       <Card
+        name='Typescript'
+        src={typescript}
+        niveau='Débutant'
+        tags={['Personnel']}></Card>{' '}
+      <Card
         name='Three.js'
         src={three}
+        niveau='Débutant'
+        tags={['Personnel']}></Card>
+      <Card
+        name='Figma'
+        src={figma}
         niveau='Débutant'
         tags={['Personnel']}></Card>
     </div>
