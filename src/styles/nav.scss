@@ -1,8 +1,12 @@
 @import './settings.scss';
+@font-face {
+  font-family: 'Jonathan Hetegral';
+  src: url('../../public/font/Jonathan Hetegral.otf');
+}
 
 .header {
   display: grid;
-  grid-template-columns: 70% 1fr;
+  grid-template-columns: 50% 1fr;
   grid-template-areas: 'vide navbar';
   align-content: center;
   width: 100%;
@@ -13,24 +17,63 @@
   box-shadow: 0px 9px 11px -3px rgba(13, 13, 13, 0.75);
   -webkit-box-shadow: 0px 9px 11px -3px rgba(13, 13, 13, 0.75);
   -moz-box-shadow: 0px 9px 11px -3px rgba(13, 13, 13, 0.75);
+  &.header::before {
+    content: '';
+    background-image: url('../img/marbre-noir.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+  }
 }
-
+.logo-header {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-left: 2rem;
+  .name-header {
+    font-family: Jonathan Hetegral;
+    color: white;
+    font-size: 2rem;
+  }
+}
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: right;
+  align-items: center;
   gap: 2rem;
   padding: 0 2rem;
   grid-area: navbar;
   a,
   a:visited {
+    height: 40%;
     font-family: $titleFont;
     font-weight: 500;
     position: relative;
     color: $thirdColor;
     text-decoration: none;
     text-transform: uppercase;
+    transition: all 0.5s;
+    overflow: hidden;
   }
-  a:after {
+  a:after,
+  a:visited:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 5%;
+    left: 5%;
+    display: block;
+    background-color: $primaryColor;
+    height: 33%;
+    width: 0%;
+    transition: width 0.5s;
+  }
+
+  a.active:after {
     content: '';
     position: absolute;
     z-index: -1;
@@ -41,7 +84,15 @@
     height: 33%;
     width: 100%;
   }
-  a.active {
-    text-decoration: underline;
+  .link {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .link-img {
+      height: 2rem;
+      object-fit: cover;
+    }
   }
 }

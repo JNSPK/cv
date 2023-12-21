@@ -1,0 +1,22 @@
+@import './settings.scss';
+
+.stack-container {
+  //   background-color: $secondaryColor;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  padding: 5rem;
+  &.stack-container::before {
+    content: '';
+    background-image: url('../img/marbre-noir.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+  }
+}
