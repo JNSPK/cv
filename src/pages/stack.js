@@ -8,6 +8,7 @@ import sass from '../img/sass.png';
 import three from '../img/three.svg';
 import typescript from '../img/typescript.png';
 import figma from '../img/figma.png';
+import mongoDb from '../img/mongodb.png';
 
 const Stack = () => {
   return (
@@ -52,6 +53,11 @@ const Stack = () => {
         src={figma}
         niveau='Débutant'
         tags={['Personnel']}></Card>
+      <Card
+        name='MongoDb'
+        src={mongoDb}
+        niveau='Débutant'
+        tags={['Openclassrooms']}></Card>
     </div>
   );
 };

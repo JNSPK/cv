@@ -10,6 +10,9 @@ body {
   font-family: $titleFont;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url('../img/marbre-noir.jpg');
+  background-size: cover;
+  min-height: 100svh;
 }
 
 #root {

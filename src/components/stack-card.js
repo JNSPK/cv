@@ -10,7 +10,7 @@ const getColorClass = (tag) => {
   }
 };
 
-const Card = (props) => {
+const StackCard = (props) => {
   return (
     <div className='card'>
       <div className='logo-container'>
@@ -30,4 +30,4 @@ const Card = (props) => {
   );
 };
 
-export default Card;
+export default StackCard;

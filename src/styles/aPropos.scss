@@ -1,22 +1,9 @@
 @import './settings.scss';
 .apropos-container {
-  // background-color: $secondaryColor;
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
   align-items: center;
-  &.apropos-container::before {
-    content: '';
-    background-image: url('../img/marbre-noir.jpg');
-    background-size: cover;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-
-    z-index: -1;
-  }
 
   .apropos {
     display: grid;
@@ -43,7 +30,7 @@
     .pp {
       font-size: $small;
       object-fit: cover;
-      height: 20rem;
+      height: 30rem;
       border-radius: 1%;
       box-shadow: 0px 9px 11px -3px rgba(13, 13, 13, 0.75);
       -webkit-box-shadow: 0px 9px 11px -3px rgba(13, 13, 13, 0.75);

@@ -25,6 +25,13 @@ const Nav = () => {
           Stack
         </NavLink>
         <NavLink
+          to='/projets'
+          className={({ isActive, isPending }) =>
+            isPending ? 'pending' : isActive ? 'active' : ''
+          }>
+          Projets
+        </NavLink>
+        <NavLink
           to='/a-propos'
           className={({ isActive, isPending }) =>
             isPending ? 'pending' : isActive ? 'active' : ''

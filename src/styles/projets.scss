@@ -1,13 +1,12 @@
 @import './settings.scss';
 
-.stack-container {
+.projets-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
   width: 100%;
   justify-items: center;
   align-items: center;
   justify-self: center;
-  column-gap: 1rem;
   padding: 2rem 10rem;
+  gap: 2rem;
 }

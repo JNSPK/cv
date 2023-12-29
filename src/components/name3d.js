@@ -1,5 +1,5 @@
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { Center, Text3D, Float, useTexture } from '@react-three/drei';
+import { Center, Text3D, Float } from '@react-three/drei';
 import { useRef } from 'react';
 
 const CustomMesh = () => {
@@ -73,7 +73,6 @@ const Scene = () => {
   const spotLightIntensity = 1.3;
   const spotLightRadius = 1.57;
   const spotLightColour2 = '#4C3B4D'; //violet
-  const texture3 = useTexture('./textures/marble3.jpg');
 
   return (
     <>

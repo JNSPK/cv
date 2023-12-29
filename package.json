@@ -1,6 +1,7 @@
 {
   "name": "cv",
   "version": "0.1.0",
+  "homepage": "https://JNSPK.github.io/cv",
   "private": true,
   "dependencies": {
     "@react-three/drei": "^9.89.0",
