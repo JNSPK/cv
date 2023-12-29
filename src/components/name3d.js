@@ -34,7 +34,7 @@ const CustomMesh = () => {
                 size={2.5}
                 lineHeight={1}
                 letterSpacing={0.1}
-                font={'/JHreverse.json'}>
+                font={'./JHreverse.json'}>
                 {`Johan Nilsson`}
                 <meshPhysicalMaterial
                   roughness={0.1}
@@ -52,7 +52,7 @@ const CustomMesh = () => {
                 size={1}
                 lineHeight={0.5}
                 letterSpacing={0.1}
-                font={'/Payback.json'}>
+                font={'./Payback.json'}>
                 {`Portfolio`}
                 <meshPhysicalMaterial
                   roughness={0.1}
